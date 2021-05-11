@@ -1,8 +1,9 @@
-import A from './test'
-const a = new A();
+import * as express from 'express';
 
-
-console.log(1);
-console.log(1);
-console.log(1);
-console.log(1);
+const app = express();
+app.get ('/',  (request, response)=>{
+    response.send('test');
+});
+app.listen (3000, ()=>{
+    console.log('started');
+});

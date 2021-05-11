@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack",
+    "watch": "webpack --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon-webpack-plugin": "^4.5.2",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0"
   }
