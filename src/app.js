@@ -1,19 +1,17 @@
 import * as express from 'express';
-import {Server, } from 'socket.io';
-import * as http from 'http';
+import {Server} from 'socket.io';
 
 const app = express();
 
-app.get ('/test',  (request, response)=>{
-    response.send('test');
+app.get ('/test',  (request, response) => {
+  response.send('test');
 });
-app.listen (3000, ()=>{
-    console.log('started');
+const server = app.listen (3000, () => {
+  console.log('started');
 });
 
-const server = http.createServer(app);
 const io = new Server(server);
 
 io.on('connection',(socket)=>{
-    console.log('user connected')
-}); 
+  console.log('user connected')
+});
